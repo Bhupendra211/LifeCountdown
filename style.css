@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background: #000;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container .heading {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.collection {
+    background: #0e0146;
+    color: white;
+    display: grid;
+    grid-column: 1 / 6;
+    padding: 10px 0;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.collection .box {
+    border-right: 2px solid black;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .collection {
+        background: #0e0146;
+        color: white;
+        display: grid;
+        grid-column: 1 / 3;
+        padding: 10px 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .collection .box {
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .collection .hideBottom {
+        border-bottom: none;
+    }
+
+    .collection .hideRight {
+        border-right: none;
+    }
+}
