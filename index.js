@@ -1,4 +1,3 @@
-const dob = "02-11-2000";
 const lifespan = 67.74;
 
 function calculateRemainingTime(birthdate, lifespan) {
@@ -23,5 +22,6 @@ function calculateRemainingTime(birthdate, lifespan) {
     seconds.innerHTML = Math.floor(remainingTime % 60)
 }
 
+let dob = prompt("What is your date of birth (example: 01-01-2001)");
 
 setInterval(() => calculateRemainingTime(dob, lifespan), 1000);
